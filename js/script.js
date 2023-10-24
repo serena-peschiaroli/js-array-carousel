@@ -4,7 +4,7 @@
 
 // (indicizzazione circolare : iterare array loop, l'indice torna al principio quando raggiunge la fine. Si usa il % per fare in modo che l'indice rimanga entro il range dell'array
 // si parte da un indice (es currentIndex), poi si incrementa currentIndex + 1; poi si fa in modo che l'indice stia entro il range di indici dell'array ( 0 to `array.length - 1`) si usa il % => (currentIndex + 1) % array.length [questo calcola il resto qudno currentInde+1 è diviso per array.length] )===> quindi se currentIdex+1 eccede lunghezza array, il risultato torna a zero 
-
+// ________________________________
 // sintassi documentazione: 
 // const array = [1, 2, 3, 4, 5];
 // let currentIndex = 2;
@@ -16,7 +16,7 @@
 // // If you keep moving, it wraps around to the beginning
 // currentIndex = (currentIndex + 1) % array.length;
 // console.log(array[currentIndex]); // Outputs: 4
-
+// _______________________________________
 
 // array
 
@@ -32,6 +32,14 @@ function updateSlider() {
     itemContent = '';
     for (let i = 0; i < myImages.length; i++) {
         const isVisible = i === slideIndex ? 'active' : '';
+        // operatore ternario --> condition (espressione booleana vera o falsa) ? expressionIfTrue;(valore se espressione vera) : expressionIfFalse (valore o condizione se espressione falsa)
+        // si può scrivere con if esle 
+        // let isVisible;
+        // if (i === slideIndex) {
+        //  isVisible = 'active';
+        // } else {
+        // isVisible = '';
+        // }
         itemContent += `<div class="item ${isVisible}"><img src="./img/${myImages[i]}" alt=""></div>`;
     }
     itemSlider.innerHTML = itemContent;
@@ -68,7 +76,7 @@ setInterval(showNextSlide, 5000);
 
 
 
-
+// VERSIONE NUMERO UNO SENZA SETINTERVAL E SENZA INDICIZZAZIONE CIRCOLARE
 // // array di immagini
 // const myImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
