@@ -76,7 +76,7 @@ setInterval(showNextSlide, 5000);
 
 
 
-// VERSIONE NUMERO UNO SENZA SETINTERVAL E SENZA INDICIZZAZIONE CIRCOLARE
+// VERSIONE NUMERO UNO
 // // array di immagini
 // const myImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
